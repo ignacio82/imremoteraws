@@ -1,0 +1,15 @@
+version: '3'
+services:
+    imremoter:
+      container_name: imremoter
+      image: ignacio82/imremoteraws
+      restart: unless-stopped
+      network_mode: host
+      environment:
+          - TZ=america/new_york
+          - api_key=my_super_secret_password
+      volumes:
+          - ~/.ssh:/root/.ssh
+      ports:
+          - 49152:49152
+
