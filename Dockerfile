@@ -9,6 +9,3 @@ RUN R -e "drat::addRepo(account = 'Ignacio', alturl = 'https://drat.ignacio.webs
 
 RUN mkdir -p /root/.ssh
 VOLUME [ "/root/.ssh" ]
-RUN  echo "    IdentityFile /root/.ssh/id_rsa" >> /etc/ssh/ssh_config
-
-
